@@ -4,8 +4,26 @@ class hero {
         this.idade = idade,
         this.tipo = tipo
     }
-
     atacar(){
+        switch(this.tipo){
+            case "mago":
+                console.log(`O ${this.tipo} atacou usando magia`)
+                break;
+            case "guerreiro":
+                console.log(`O ${this.tipo} atacou usando espada`)
+                break;
+            case "monge":
+                console.log(`O ${this.tipo} atacou usando artes marciais`)
+                break;
+            case "ninja":
+                console.log(`O ${this.tipo} atacou usando shuriken`)
+                break;
+            default:
+                console.log("Classe de herói não existe")
+            }
+        }
+    
+    /*atacar(){
         if(this.tipo =="mago"){
             console.log(`O ${this.tipo} atacou usando magia`)
         }else if(this.tipo =="guerreiro"){
@@ -18,9 +36,9 @@ class hero {
             console.log("Classe de guerreiro não especificada")
         }
 
-    }
+    }*/
         
 } 
 
-let heroi = new hero("RobimRu", 34, "ninja")
+let heroi = new hero("RobimRu", 34, "monge")
 heroi.atacar()
